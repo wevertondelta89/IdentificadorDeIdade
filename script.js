@@ -4,7 +4,7 @@ function verificar() {
     var fano = document.getElementById('txtano')
     var res = document.querySelector('div#res')
     if (fano.value.length == 0 || fano.value >ano) {
-        window.alert('[ERRO] Verifique os dados e tente novamente!')
+        window.alert(`[ERRO] Verifique os dados e tente novamente!`)
     } else {
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
@@ -49,7 +49,7 @@ function verificar() {
             }
         }
         res.style.textAlign =  'center'
-        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
+        res.innerHTML = `<strong>Detectamos ${gênero} com ${idade} anos.</strong>`
         res.appendChild(img)
     }
 }
